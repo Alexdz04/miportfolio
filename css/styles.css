@@ -225,12 +225,14 @@ h1 {
     pointer-events: none;
     animation: particleFall 1.5s ease-out forwards;
     z-index: 10;
-    color: var(--primary-color);
-    font-size: 24px;
     font-weight: bold;
     text-align: center;
     line-height: 50px;
     opacity: 1;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+    user-select: none;
 }
 
 @keyframes particleFall {
@@ -240,9 +242,16 @@ h1 {
     }
     100% {
         opacity: 0;
-        transform: translate(var(--tx), var(--ty)) rotate(var(--rot)) scale(0.8);
+        transform: translate(var(--tx), var(--ty)) rotate(var(--rot)) scale(0.6);
     }
 }
+
+.particle.color1 { background-color: #00A8FF; box-shadow: 0 0 12px #00A8FF; }
+.particle.color2 { background-color: #FF6B6B; box-shadow: 0 0 12px #FF6B6B; }
+.particle.color3 { background-color: #FFD93D; box-shadow: 0 0 12px #FFD93D; }
+.particle.color4 { background-color: #6BCB77; box-shadow: 0 0 12px #6BCB77; }
+.particle.color5 { background-color: #FF9F1C; box-shadow: 0 0 12px #FF9F1C; }
+.particle.color6 { background-color: #9B5DE5; box-shadow: 0 0 12px #9B5DE5; }
 
 .profile-pic:hover, .profile-pic:focus {
     box-shadow: 0 0 24px rgba(0,0,0,0.3);
@@ -650,7 +659,6 @@ body.dark-theme .main-nav a:not(.active):hover {
     box-shadow: none;
     color: #00a8ff;
 }
-
 
 body:not(.dark-theme) .site-header {
     background-color: rgba(255, 255, 255, 0.9); 

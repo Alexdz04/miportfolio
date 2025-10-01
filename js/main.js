@@ -88,11 +88,11 @@ document.addEventListener('DOMContentLoaded', function() {
             projectsTitle: 'My Projects',
             projectsDesc: 'A selection of some of my work. You can see more on my GitHub profile.',
             project1Title: 'Personal Task Management System',
-            project1Desc: 'The Personal Task Management System (PTMS) is a web application I developed to organize and manage daily tasks more efficiently.',
+            project1Desc: 'The Personal Task Management System, a web application I developed to organize and manage daily tasks more efficiently',
             project2Title: 'GameStore',
-            project2Desc: '"GameStore" is a project I built where you can view a list of games with full CRUD functionality.',
+            project2Desc: '"GameStore" is a project I built where you can view a list of games with full CRUD functionality',
             project3Title: 'Ministry of Environment App',
-            project3Desc: 'A mobile application developed in Dart (Flutter) for the Ministry of Environment.',
+            project3Desc: 'A mobile application developed in Dart (Flutter) for the Ministry of Environment',
             talk: 'Get in touch with me',
             contactDesc: 'You can contact me by filling out the form or via WhatsApp, email, Telegram or SMS.',
             message: 'Or leave me a message',
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    
+
     const linkTranslations = {
         es: {
             logoText: 'Mi portafolio',
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateLinks(lang) {
         const logoLink = document.querySelector('.logo a');
-        const cvLink = document.querySelector('.cv-button'); 
+        const cvLink = document.querySelector('.cv-button');
 
         if (logoLink) {
             logoLink.textContent = linkTranslations[lang].logoText;
@@ -243,48 +243,56 @@ document.addEventListener('DOMContentLoaded', function() {
 
     backToTop.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
 
-    // Easter egg
+    // Easter egg 
     const profilePic = document.querySelector('.profile-pic');
 
-if (profilePic) {
-    profilePic.addEventListener('click', (event) => {
-        const rect = profilePic.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
+    if (profilePic) {
+        profilePic.addEventListener('click', (event) => {
+            const clickX = event.clientX;
+            const clickY = event.clientY;
 
-        const particles = ['HTML', 'JS', 'C#', '.NET', 'CSS', 'PYTHON'];
+            const particles = ['HTML', 'JS', 'C#', '.NET', 'CSS', 'PYTHON'];
+            const colors = ['color1', 'color2', 'color3', 'color4', 'color5', 'color6'];
 
-        
-        for (let i = 0; i < 15; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
 
-            
-            particle.innerText = particles[Math.floor(Math.random() * particles.length)];
+                
+                particle.innerText = particles[Math.floor(Math.random() * particles.length)];
 
-            
-            particle.style.left = `${centerX}px`;
-            particle.style.top = `${centerY}px`;
+          
+                const colorClass = colors[Math.floor(Math.random() * colors.length)];
+                particle.classList.add(colorClass);
 
-       
-            const angle = (Math.random() * Math.PI) - (Math.PI / 2); 
-            const distanceX = Math.random() * 200 - 100; 
-            const distanceY = 100 + Math.random() * 150; 
-            const tx = Math.cos(angle) * distanceX;
-            const ty = distanceY; 
+           
+                const size = Math.floor(Math.random() * 18) + 14;
+                particle.style.fontSize = `${size}px`;
 
-     
-            const rot = (Math.random() * 360) - 180; 
+                particle.style.left = `${clickX}px`;
+                particle.style.top = `${clickY}px`;
 
-            particle.style.setProperty('--tx', `${tx}px`);
-            particle.style.setProperty('--ty', `${ty}px`);
-            particle.style.setProperty('--rot', `${rot}deg`);
+           
+                const angle = Math.random() * Math.PI * 2;
+                
+                
+                const distance = Math.random() * 200 + 100;
+                
+                const tx = Math.cos(angle) * distance;
+                const ty = Math.sin(angle) * distance;
 
-            document.body.appendChild(particle);
+                
+                const rot = (Math.random() * 360) - 180;
 
-            setTimeout(() => particle.remove(), 1500);
-        }
-    });
-}
+                particle.style.setProperty('--tx', `${tx}px`);
+                particle.style.setProperty('--ty', `${ty}px`);
+                particle.style.setProperty('--rot', `${rot}deg`);
+
+                document.body.appendChild(particle);
+
+                setTimeout(() => particle.remove(), 1500);
+            }
+        });
+    }
 
 });
