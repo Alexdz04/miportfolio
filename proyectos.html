@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | Mi portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Mi portfolio</a>
+            </div>
+            <nav class="main-nav" role="navigation">
+                <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+                <ul>
+                    <li><a href="index.html" data-lang="about">Sobre mi</a></li>
+                    <li><a href="proyectos.html" class="active" data-lang="projects">Proyectos</a></li>
+                    <li><a href="contacto.html" data-lang="contact">Contactame</a></li>
+                    <li><a href="assets/CV_Alejandro_Diaz_Peralta.pdf" download class="cv-button" data-lang="cv">Descarga mi CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="projects">
+            <h1 data-lang="projectsTitle">Mis proyectos</h1>
+            <p data-lang="projectsDesc">Seleccion de algunos de mis trabajos.</p>
+            
+            <div class="projects-grid">
+                <div class="project-card" tabindex="0">
+                    <h2 data-lang="project1Title">Sistema de Gestión de Tareas Personales</h2>
+                    <p data-lang="project1Desc">El Sistema de Gestión de Tareas Personales (SGTP) es una aplicación web que hice para que se pueda organizar y gestionar las tareas diarias de una manera mas eficiente</p>
+                    <a href="https://github.com/Alexdz04/SGTP.web" target="_blank" class="button" data-lang="githubCard">Ver en GitHub</a>
+                </div>
+
+                <div class="project-card" tabindex="0">
+                    <h2 data-lang="project2Title">GameStore</h2>
+                    <p data-lang="project2Desc">"GameStore" que hice el cual se puede ver un listado de juegos. CRUD.</p>
+                    <a href="https://github.com/Alexdz04/GameDeStore-" target="_blank" class="button" data-lang="githubCard">Ver en GitHub</a>
+                </div>
+
+                <div class="project-card" tabindex="0">
+                    <h2 data-lang="project3Title">App ministerio medio ambiente</h2>
+                    <p data-lang="project3Desc">Aplicacion movil hecha en Dart (Flutter) para el ministerio de medio ambiente.</p>
+                    <a href="https://github.com/Alexdz04/App-Ministerio-medio-ambiente" target="_blank" class="button" data-lang="githubCard">Ver en GitHub</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 35px;">
+                <a href="https://github.com/Alexdz04" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="project-github-btn"
+                   aria-label="Ir a mi perfil de GitHub">
+                    <i class="fa-brands fa-github" style="margin-right:10px;"></i>
+                    <span data-lang="githubButton">GitHub</span>
+                </a>
+            </div>
+        </section>
+        <div class="section-divider"></div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p data-lang="footer">&copy; Jayner Alejandro Diaz Peralta. Portfolio.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

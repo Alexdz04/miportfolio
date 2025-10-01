@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactame | Mi portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Mi portfolio</a>
+            </div>
+            <nav class="main-nav" role="navigation">
+                <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+                <ul>
+                    <li><a href="index.html" data-lang="about">Sobre mi</a></li>
+                    <li><a href="proyectos.html" data-lang="projects">Proyectos</a></li>
+                    <li><a href="contacto.html" class="active" data-lang="contact">Contactame</a></li>
+                    <li><a href="assets/CV_Alejandro_Diaz_Peralta.pdf" download class="cv-button" data-lang="cv">Descarga mi CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="contact-section">
+            <h1 data-lang="talk">Contactame</h1>  
+            <p data-lang="contactDesc">Puedes contactarme rellenando el formulario o via WhatsApp, Email, Telegram o SMS.</p>
+            
+            <a href="mailto:alejandrodiazdp1@gmail.com" class="contact-email">
+                <i class="fa-solid fa-envelope"></i> alejandrodiazdp1@gmail.com 
+            </a>
+
+            <div class="contact-options">
+                <a href="https://t.me/alejandrodiaz04" class="contact-button telegram" target="_blank">
+                    <i class="fa-brands fa-telegram"></i> <span data-lang="contactTelegram">Telegram</span>
+                </a>
+                <a href="https://wa.me/8093534605" class="contact-button whatsapp" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> <span data-lang="contactWhatsapp">WhatsApp</span>
+                </a>
+                <a href="tel:8093534605" class="contact-button phone">
+                    <i class="fa-solid fa-phone"></i> <span data-lang="contactPhone">Llamar</span>
+                </a>
+            </div>
+
+            <h2 data-lang="message">O dejame un mensaje</h2>
+            
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name" data-lang="name">Nombre</label>  
+                    <input type="text" id="name" name="name" placeholder="Nombre" data-lang="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-lang="email">Correo electronico</label>  
+                    <input type="email" id="email" name="email" placeholder="Correo electronico" data-lang="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone" data-lang="phone">Numero de telefono (Opcional)</label>  
+                    <input type="tel" id="phone" name="phone" placeholder="Numero de telefono (Opcional)" data-lang="phone">  
+                </div>
+                <div class="form-group">
+    <label for="message" data-lang="reason">Razon del contacto</label>  
+    <textarea id="message" name="message" rows="5" placeholder="Razon del contacto" data-lang="reason" required></textarea>
+</div>
+                <button type="submit" class="button" data-lang="send">Enviar mensaje</button> 
+                <div class="form-success" style="display: none;">Enviado!</div>
+                <div class="form-error" style="display: none;">Error al enviar...</div>
+            </form>
+        </section>
+        <div class="section-divider"></div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p data-lang="footer">Jayner Alejandro Diaz Peralta. Portfolio.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
